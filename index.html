@@ -11,12 +11,14 @@
 
   </head>
   <body>
-    <div class="container">
-      <button id="btnStartRecord">Grabar</button>
-      <button id="btnStopRecord">Terminar Grabación</button>
-      <button id="playText">Reproducir texto</button>
+    <div class="container py-5">
+      <div class="botones py-3">
+        <button id="btnStartRecord" class="btn btn-success">Grabar</button>
+        <button id="btnStopRecord" class="btn btn-info text-white">Terminar Grabación</button>
+        <button id="btnPlayText" class="btn btn-warning text-white">Reproducir texto</button>
+      </div>
+      <textarea id="texto" cols="45" rows="10"></textarea>
     </div>
-    <textarea id="texto" cols="30" rows="10"></textarea>
 
     <script src="script.js"></script>
     <!-- Bootstrap JavaScript Libraries -->

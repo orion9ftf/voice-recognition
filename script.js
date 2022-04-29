@@ -1,6 +1,6 @@
 const btnStartRecord = document.getElementById('btnStartRecord');
 const btnStopRecord = document.getElementById('btnStopRecord');
-const btnPlayText = document.getElementById('playText');
+const btnPlayText = document.getElementById('btnPlayText');
 const texto = document.getElementById('texto');
 
 //reconocimiento de voz según idioma:
