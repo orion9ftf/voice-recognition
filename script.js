@@ -1,5 +1,6 @@
 const btnStartRecord = document.getElementById('btnStartRecord');
 const btnStopRecord = document.getElementById('btnStopRecord');
+const btnPlayText = document.getElementById('playText');
 const texto = document.getElementById('texto');
 
 //reconocimiento de voz según idioma:
@@ -29,7 +30,27 @@ btnStartRecord.addEventListener('click', () => {
   recognition.start();
 })
 
+
 btnStopRecord.addEventListener('click', () => {
   recognition.abort();
 })
 
+
+btnPlayText.addEventListener('click', () => {
+  leerTexto(texto.value);
+})
+
+
+//el navegador me repite lo que tengo en el textarea:
+function leerTexto(texto) {
+  //creamos el objeto:
+  const speech = new SpeechSynthesisUtterance();
+
+  //modificar las propiedades
+  speech.text = texto;
+  speech.volume = 1; //nivel de volume
+  speech.rate = 1; //velocidad de reproducción
+  speech.pitch = 1; //tono
+
+  window.speechSynthesis.speak(speech);
+}
